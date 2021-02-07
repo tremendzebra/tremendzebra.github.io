@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function success() {
+                location.href = 'success-path';
+            }
+
+            function error() {
+                location.href = 'error-path';
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin-top: 3rem;">
+            <button onClick="success()">success</button>
+            <button onClick="error()">fail</button>
+          </div>          
+    </body>
+</html>

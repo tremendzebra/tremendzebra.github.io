@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            let cardId;
+            function success() {
+                location.href = `success-path?cardId=${cardId}`;
+            }
+
+            function error() {
+                location.href = 'error-path?errorCode=404&errorMessage=some';
+            }
+
+            function keyUp(value) {
+                cardId = value;
+                console.log(value)
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin-top: 3rem;">
+            <button onClick="success()">success</button>
+            <button onClick="error()">fail</button>
+            <input type="text" autocapitalize="none" onkeyup="keyUp(event.target.value)"/>
+          </div>          
+    </body>
+</html>
